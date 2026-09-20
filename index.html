@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><meta name="theme-color" content="#20251f"/><title>本色 · 草本茶饮｜空间漫游</title></head>
+<body>
+  <div id="scene" aria-label="可交互三维店铺"></div>
+  <div class="vignette"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="返回入口"><span class="seal">本<br>色</span><span class="brand-copy">本色<span>HERBAL TEA ATELIER</span></span></a>
+    <div class="project-title"><span class="live-dot"></span> 空间体验 <span class="divider">/</span> 店铺概念方案</div>
+    <div class="top-actions"><button id="reference-btn" class="text-btn">设计参考 <span>↗</span></button><button id="help-btn" class="icon-btn" aria-label="操作说明">?</button><button id="fullscreen-btn" class="icon-btn" aria-label="全屏预览">⛶</button></div>
+  </header>
+  <main>
+    <aside class="intro"><div class="eyebrow">A QUIET MOMENT, A NATURAL SIP.</div><h1>一杯草本，<br>一处自在。</h1><p>走进本色，感受空间里的自然与温度。</p><div class="material-row"><i class="swatch wood"></i><i class="swatch stone"></i><i class="swatch green"></i><span>深木 · 暖石 · 草本绿</span></div></aside>
+    <div class="area-marker"><span class="marker-dot"></span><span id="area-name">入口 · 空间初见</span><span id="area-index">01 / 04</span></div>
+    <div id="hotspots"></div>
+    <aside class="map-card"><div class="map-heading"><span>空间导览 <small>FLOOR PLAN</small></span><button id="map-toggle" aria-label="收起平面图">−</button></div><div id="map-body"><canvas id="minimap" width="440" height="360" aria-label="店铺平面图，点击切换区域"></canvas><div class="map-footer"><span><i></i> 当前视点</span><button id="overview-btn">俯瞰全店 ↗</button></div></div></aside>
+    <div class="view-tools"><button id="light-btn" title="切换灯光氛围"><span>☀</span><span id="light-label">暖光氛围</span></button><button id="capture-btn" title="保存当前三维视角"><span>⌑</span><span>保存视角</span></button></div>
+    <div class="bottom-wrap"><div class="walk-hint" id="walk-hint"><span class="mouse-icon">↔</span> 拖动环视 <b>·</b> <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> 行走 <b>·</b> 点击下方探索区域</div>
+      <nav class="zone-nav" aria-label="空间区域"><button class="zone active" data-zone="entry"><span class="zone-no">01</span><span>入口初见<small>ENTRANCE</small></span><span class="zone-arrow">↗</span></button><button class="zone" data-zone="order"><span class="zone-no">02</span><span>点单区域<small>ORDER & PICKUP</small></span><span class="zone-arrow">↗</span></button><button class="zone" data-zone="display"><span class="zone-no">03</span><span>草本展示<small>HERBAL GALLERY</small></span><span class="zone-arrow">↗</span></button><button class="zone" data-zone="lounge"><span class="zone-no">04</span><span>自在休息<small>TAKE A SEAT</small></span><span class="zone-arrow">↗</span></button></nav>
+    </div>
+    <div class="project-note">按参考平面图比例搭建 · 概念空间预览</div>
+    <div id="mobile-controls"><button data-move="forward" aria-label="前进">↑</button><button data-move="left" aria-label="左移">←</button><button data-move="back" aria-label="后退">↓</button><button data-move="right" aria-label="右移">→</button></div>
+  </main>
+  <div id="loading"><span class="loading-seal">本色</span><p>正在点亮空间</p><div class="loading-line"></div></div>
+  <div id="toast" role="status"></div>
+  <dialog id="reference-dialog"><div class="dialog-header"><div><div class="eyebrow">DESIGN REFERENCES</div><h2>从平面到空间</h2></div><button class="close-dialog" aria-label="关闭设计参考">×</button></div><p>第一张图确定布局，三张意向图确定材质与氛围。空间尺度为按图估算，非施工尺寸。</p><div class="reference-grid"><figure><img src="/references/plan.jpg" alt="店铺原始分区平面图"/><figcaption>01 / 分区与动线依据</figcaption></figure><figure><img src="/references/order.png" alt="点单区黑色柜体与暖白灯箱参考"/><figcaption>02 / 点单区域 · 深色柜体与灯箱</figcaption></figure><figure><img src="/references/display.png" alt="草本展示柜参考"/><figcaption>03 / 展示区域 · 陈列与暖光</figcaption></figure><figure><img src="/references/lounge.png" alt="休息区长椅与圆桌参考"/><figcaption>04 / 休息区域 · 长椅与圆桌</figcaption></figure></div></dialog>
+  <dialog id="help-dialog"><div class="dialog-header"><h2>慢慢走，看看这里。</h2><button class="close-dialog" aria-label="关闭操作说明">×</button></div><div class="help-list"><p><b>环顾四周</b><span>按住鼠标左键拖动；手机单指滑动。</span></p><p><b>自由行走</b><span>W A S D 或方向键；手机使用左下角方向按钮。</span></p><p><b>直达区域</b><span>点击下方区域、小地图或场景中的圆点。</span></p><p><b>全店布局</b><span>点击「俯瞰全店」，拖动旋转，滚轮缩放。</span></p><p><b>留下一帧</b><span>点击「保存视角」，下载当前三维画面。</span></p></div><p class="help-note">墙体、家具与工作区设有行走边界。原图未标注精确尺寸，本预览用于空间和风格沟通。</p></dialog>
+  <script type="module" src="/src/main.js"></script>
+</body></html>
